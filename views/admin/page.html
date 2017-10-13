@@ -1,0 +1,6 @@
+<!-- 分页 -->
+
+<div class="page">
+	<a {% if page != 1 %}href="/admin/{{url}}?page={{page-1}}"{%endif%}  class="prev">上一页</a>
+	<a {% if page != pageNum %}href="/admin/{{url}}?page={{page+1}}"{%endif%}  class="next">下一页</a>
+</div>

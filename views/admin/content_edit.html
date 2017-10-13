@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="content">
+	<ul class="bread">
+		<li>
+			<a href="/admin">管理首页</a> <span>/</span>
+		</li>
+		<li>
+			<span>修改文章</span> <span>/</span>
+		</li>
+	</ul>
+
+	<div class="main-form">
+		<form method="post">
+			<div class="form-item">
+				<label for="cate">分类</label>
+				<select name="cate" id="cate">
+					<option value="">请选择</option>
+					{% for cate in cates %}
+						<option {% if content.cate.toString() == cate._id.toString() %} selected="selected" {% endif %} value="{{cate._id.toString()}}">{{cate.catename}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="form-item">
+				<label for="title">文章名称</label>
+				<input type="text" name="title" id="title" value="{{content.title}}" />
+			</div>
+			<div class="form-item">
+				<label for="description">文章简介</label>
+				<textarea name="description" id="description" rows="5">{{content.description}}</textarea>
+			</div>
+			<div class="form-item">
+				<label for="content">文章内容</label>
+				<textarea name="content" id="content" rows="10">{{content.content}}
+				</textarea>
+			</div>
+			<input type="hidden" name="_id" value="{{content._id}}"/>
+			<div class="form-btn">
+				<button>修 改</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

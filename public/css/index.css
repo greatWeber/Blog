@@ -1,0 +1,419 @@
+body,p,h1,h2,h3,h4,h5,h6,img,ul,ol{
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: #eee;
+	font-size: 13px;
+	color: #333;
+	font-family: "微软雅黑";
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	zoom: 1;
+}
+
+.clear:after {
+	content: '.';
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+
+}
+
+.hide {
+	display: none;
+}
+
+/*header*/
+
+.header {
+	height: 200px;
+	width: 100%;
+	background: #21cbf7;
+	color: #fff;
+}
+
+.header .logo {
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+}
+
+.header .bar {
+	height: 50px;
+	line-height: 50px;
+	background: rgba(0,0,0,0.8);
+}
+
+.header .bar ul {
+	width: 100%;
+}
+
+.header .bar li{
+	height: 100%;
+	float: left;
+}
+
+.header .bar li a {
+	display: block;
+	height: 100%;
+	padding: 0 30px;
+	color: #fff;
+}
+
+.header .bar li a:hover {
+	
+	background: #21cbf7;
+}
+
+.header .bar .act {
+	background: #21cbf7;
+}
+
+/*--------------------------------------------------*/
+
+/*main*/
+
+.main {
+	float: left;
+	width: 600px;
+}
+
+.main .main-list {
+	width: 100%;
+}
+
+.main .main-item {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	margin-top: 30px;
+	background: #fff;
+	border: 1px solid #eee;
+}
+
+.main-title h2 {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.main-title .title-info {
+	width: 70%;
+	margin: 10px auto;
+}
+
+.title-info li {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 5px;
+	color: #333;
+}
+
+.title-info li span {
+	color: #21cbf7;
+}
+
+.main-content {
+	width: 100%;
+	line-height: 25px;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.main-btn {
+	/*margin: 10px 0;*/
+}
+
+.main-btn a {
+	font-size: 13px;
+	display: block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	background: #21cbf7;
+}
+
+.main-btn a:hover {
+	background: #0fb3de;
+}
+
+/*page*/
+
+.page {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+	margin-top: 30px;
+}
+
+.page a{
+	height: 100%;
+	color: #333;
+	margin: 0 50px;
+	text-align: center;
+}
+
+
+.page .prev{
+	float: left
+}
+
+.page .next{
+	float: right
+}
+
+
+.page a:hover {
+	color: #21cbf7;
+}
+
+.page p {
+	width: 50%;
+}
+
+/*--------------------------------------------------*/
+
+
+/*--------------------------------------------------*/
+
+/*side*/
+
+.side {
+	margin-left: 650px;
+	width: 350px;
+	overflow: hidden;
+}
+
+.side .side-box {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	margin-top: 30px;
+	border: 1px solid #eee;
+}
+
+.side-box .side-title {
+	height: 30px;
+	border-bottom: 1px solid #ddd;
+}
+
+.side-title h2 {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 500;
+	padding-right: 15px;
+	height: 29px;
+	line-height: 30px;
+	border-bottom: 2px solid #21cbf7;
+}
+
+.side-form {
+	width: 100%;
+	padding: 10px 0;
+}
+
+.side-form .form-item {
+	height: 35px;
+	line-height: 35px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.form-item label {
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+
+.form-item input {
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+	border: 1px solid #ccc;
+	/*border-color: #ccc;*/
+}
+
+.form-btn a {
+	display: block;
+	width: 205px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+	text-align: center;
+	background: #21cbf7;
+	border: none;
+	margin-left: 83px;
+	color: #fff;
+}
+
+.form-btn a:hover {
+	background: #0fb3de; 
+}
+
+.form-info .tip {
+	color: red;
+	float: left;
+}
+
+.form-info .info {
+	float: right;
+	padding-right: 18px;
+}
+
+.form-info a{
+	color: #21cbf7;
+}
+
+.form-info a:hover {
+	color: #0fb3de; 
+}
+
+.user-info p {
+	margin: 20px 0;
+}
+
+.user-info .user {
+	color: #21cbf7;
+}
+
+.info-btn a {
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.info-btn .manage {
+	background:  #21cbf7;
+	border: 1px solid  #21cbf7;
+	color: #fff;
+
+}
+
+.info-btn .signOut {
+	color: #333;
+	margin-left: 30px;
+	border: 1px solid #ccc;
+}
+
+/*评论*/
+
+.comments {
+	width: 100%;
+	margin-top: 20px;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.comments .comments-head {
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	color: #333;
+}
+
+.comments .comments-head h3 {
+	font-weight: 500px;
+}
+
+.comments .form-item {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+	border: 1px solid #21cbf7;
+	position: relative;
+}
+
+.comments .comments-form .text {
+	position: absolute;
+	width: 80%;
+	height: 45px;
+	text-indent: 10px;
+	top: 0;
+	left: 0;
+	border: none;
+}
+
+.comments .comments-form .btn {
+	position: absolute;
+	left:80%;
+	top:0;
+	width: 20%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	background: #21cbf7;
+	cursor: pointer;
+
+}
+
+
+.comments-tip {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background: #21cbf7;
+	margin: 10px 0;
+}
+
+.comments-list {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.comments-list .list-item {
+	border-bottom: 1px solid #ccc;
+	font-size: 15px;
+}
+
+.comments-list .item-title {
+	line-height: 50px;
+	color: #999;
+}
+.comments-list .item-content {
+	font-size: 13px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+
+.list-btn {
+	cursor: pointer;
+}
+
+
+/*--------------------------------------------------*/

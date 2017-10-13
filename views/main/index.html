@@ -1,0 +1,41 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!-- main-list -->
+		<div class="main-list">
+			
+		{% for content in contents %}
+			<!-- main-item -->
+			<div class="main-item">
+				<div class="main-title">
+					<h2>{{content.title}}</h2>
+					<ul class="title-info">
+						<li>作者： <span>{{content.user.username}}</span></li>
+						<li>时间： <span>{{content.addTime|date('Y-m-d')}}</span></li>
+						<li>阅读： <span>{{content.views}}</span></li>
+						<li>评论： <span>{{content.comments.length}}</span></li>
+					</ul>
+				</div>
+				<div class="main-content">
+					<p>{{content.description}}</p>
+				</div>
+				<div class="main-btn">
+					<a href="/view?id={{content.id}}">阅读全文</a>
+				</div>
+			</div>
+			<!-- main-item end -->
+
+		{% endfor %}
+
+		</div>
+		<!-- main-list end -->
+
+		<div class="page clear">
+			<a class="prev" {% if page != 1 %}href="/?page={{page-1}}"{%endif%}>上一页</a>
+			<a class="next" {% if page != pageNum %}href="/?page={{page+1}}"{%endif%}>下一页</a>
+		</div>
+
+
+{% endblock %}

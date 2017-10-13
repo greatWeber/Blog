@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="content">
+	<ul class="bread">
+		<li>
+			<a href="/admin">管理首页</a> <span>/</span>
+		</li>
+		<li>
+			<span>文章列表</span> <span>/</span>
+		</li>
+	</ul>
+
+	<div class="main-list">
+		<table class="main-table">
+			<thead>
+				<th width="20%">ID</th>
+				<th width="15%">文章名</th>
+				<th width="15%">作者</th>
+				<th width="15%">分类</th>
+				<th width="10%">阅读量</th>
+				<th width="25%">编辑</th>
+			</thead>
+			<tbody>
+				{% for content in contents %}
+					<tr>
+						<td>{{content._id.toString()}}</td>
+						<td>{{content.title}}</td>
+						<td>{{content.user.username}}</td>
+						<td>{{content.cate.catename}}</td>
+						<td>{{content.views}}</td>
+						<td class="table-btn">
+							<a href="/admin/content/edit?id={{content._id.toString()}}" class="edit">修改</a>
+							<a href="/admin/content/delete?id={{content._id.toString()}}" class="delete">删除</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{% include 'page.html' %}
+</div>
+
+{% endblock %}

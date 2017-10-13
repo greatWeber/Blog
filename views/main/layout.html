@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>博客--首页</title>
+	<link rel="stylesheet" type="text/css" href="./public/css/index.css">
+</head>
+<body>
+<header class="header">
+	<div class="logo">
+		<h1>NodeJs博客</h1>
+	</div>
+	<div class="bar">
+		<div class="content">
+			<ul class="header-ul clear">
+				<li>
+					<a {% if category == '' %}class="act"{% endif %} href="/">首页</a>
+				</li>
+				{% for cate in cates %}
+				<li>
+					<a {% if category == cate.catename %}class="act"{% endif %} href="/?cate={{cate.catename}}">{{cate.catename}}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- header end -->
+<div class="content clear">
+	<!-- main -->
+	<div class="main">
+		{% block content %} {% endblock %}
+	</div>
+	<!-- main end -->
+
+	<!-- side -->
+	<div class="side">
+		{% if userInfo._id %}
+		<!-- 用户信息 -->
+		<div class="side-box user-box">
+			<div class="side-title">
+				<h2>用户信息</h2>
+			</div>
+			<div class="side-content">
+				<div class="user-info">
+					<p>你好！ <span class="user"> {{userInfo.username}} </span></p>
+					<div class="info-btn">
+						{% if userInfo.isAdmin %}
+						<a class="manage" href="/admin">后台管理</a>
+						{% endif %}
+						<a class="signOut" href="javascript:;">退出</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 用户信息 end -->
+		{% else %}
+		<!-- 登陆  -->
+		<div class="side-box login-box">
+			<div class="side-title">
+				<h2>登陆</h2>
+			</div>
+			<div class="side-content">
+				<form class="side-form">
+					<div class="form-item">
+						<label>用户名：</label>
+						<input type="text" name="username"/>
+					</div>
+					<div class="form-item">
+						<label>密码：</label>
+						<input type="password" name="password"/>
+					</div>
+					<div class="form-btn">
+						<a href="javascript:;">登 陆</a>
+					</div>
+				</form>
+				<div class="form-info clear">
+					<p class="tip"></p>
+					<p class="info">还没注册？ <a class="register-btn" href="javascript:;">注册</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- 登陆 end -->
+
+		<!-- 注册 -->
+		<div class="side-box register-box hide">
+			<div class="side-title">
+				<h2>注册</h2>
+			</div>
+			<div class="side-content">
+				<form class="side-form">
+					<div class="form-item">
+						<label>用户名：</label>
+						<input type="text" name="username"/>
+					</div>
+					<div class="form-item">
+						<label>密码：</label>
+						<input type="password" name="password"/>
+					</div>
+					<div class="form-item">
+						<label>确认：</label>
+						<input type="password" name="repassword"/>
+					</div>
+					<div class="form-btn">
+						<a href="javascript:;">注 册</a>
+					</div>
+				</form>
+				<div class="form-info clear">
+					<p class="tip"></p>
+					<p class="info">已有账号？ <a class="login-btn" href="javascript:;">登陆</a></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- 注册 end -->
+		{% endif %}
+	</div>
+	<!-- side end -->
+</div>
+<script type="text/javascript" src="./public/js/jquery.js"></script>
+<script type="text/javascript" src="./public/js/index.js"></script>
+</body>
+</html>

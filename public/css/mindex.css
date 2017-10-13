@@ -1,0 +1,368 @@
+body,p,h1,h2,h3,h4,h5,h6,img,ul,ol{
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	
+	font-size: 13px;
+	color: #333;
+	font-family: "微软雅黑";
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.clear {
+	zoom: 1;
+}
+
+.clear:after {
+	content: '.';
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+
+}
+
+
+
+/*header*/
+
+.header {
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	color: #fff;
+	/*overflow: hidden;*/
+	background:  #21cbf7;
+}
+
+.header .header-left {
+	width: 700px;
+	float: left;
+}
+
+.header .logo {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 150px;
+	font-size: 18px;
+	font-weight: normal;
+
+	text-align: center;
+}
+
+.header .logo a {
+	color: #fff;
+}
+
+.header .header-ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 500px;
+	/*overflow: hidden;*/
+}
+
+.header .header-ul li {
+	position: relative;
+	display: inline-block;
+}
+
+.header .header-li a {
+	display: block;
+	text-align: center;
+	height: 100%;
+	padding: 0 20px;
+	color: #fff;
+}
+
+ .header-li a:hover {
+	color: #ccc;
+	background: #0fb3de;
+}
+
+.header-li:hover .ul-list {
+	display: block;
+}
+
+.header .ul-list {
+	display: none;
+	width: 100%;
+	position: absolute;
+	background: #21cbf7;
+	top:58px;
+	left: 0;
+
+}
+
+.header .ul-list li {
+	width: 100%;
+	display: block;
+}
+
+.header .ul-list li a {
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.header-right {
+	float: right;
+	height: 100%;
+	width: 150px;
+	
+}
+
+/*.header-right .admin {
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+}
+
+.header-right .admin:hover {
+	background: #0fb3de;
+}
+
+.header-right .admin:hover .admin-info {
+	display: block;
+}
+
+.header-right .admin-info {
+	display: none;
+	position: absolute;
+	width: 100%;
+	top:58px;
+	left: 0;
+	
+	background:  #21cbf7;
+}
+
+.header-right .admin-info a {
+	color: #fff;
+}*/
+
+/*--------------------------------------------------*/
+
+/*main*/
+
+.main-index {
+	background: #eee;
+	padding: 30px;
+	margin: 50px auto;
+	text-align: center;
+	color: #333;
+	border-radius: 5px;
+}
+
+.main-index h1 {
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.bread {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 0;
+	text-align: left;
+	background: #eee;
+	border-radius: 5px;
+	margin: 35px auto;
+	padding-left: 30px;
+}
+
+.bread li {
+	display: inline-block;
+}
+
+.bread li a {
+	color: #21cbf7;
+}
+
+
+/*table*/
+
+.main-table {
+	width: 100%;
+	margin-top: 50px;
+	border: 1px solid #eee;
+	border-collapse: collapse;
+}
+
+
+.main-table th, .main-table td {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #eee;
+}
+
+.main-table th {
+	background: #21cbf7;
+	color: #fff;
+}
+
+.main-table td {
+	color: #333;
+}
+
+.main-table .table-btn {
+	text-align: center;
+}
+
+.main-table .table-btn a {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+	/*padding: 5px 10px;*/
+	color: #333;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	margin: 0 5px;
+}
+
+.main-table .table-btn a:hover {
+	background: #21cbf7;
+	border-color: #21cbf7;
+	color: #fff;
+}
+
+
+/*page*/
+
+.page {
+	width: 500px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.page a {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid #21cbf7;
+	border-radius: 10px;
+	margin-right: 5px;
+	cursor: pointer;
+	color: #333;
+}
+
+.page a:hover {
+	color: #fff;
+	background: #21cbf7;
+}
+
+/*form*/
+
+.main-form {
+	width: 100%;
+}
+
+.main-form .form-item {
+	margin: 10px auto;
+}
+
+.main-form .form-item label {
+	width: 300px;
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.main-form .form-item input {
+	width: 500px;
+	margin-left: 50px;
+	height: 30px;
+	text-indent: 10px;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	vertical-align: middle;
+}
+
+.main-form .form-item select {
+	width: 300px;
+	margin-left: 50px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.main-form .form-item textarea {
+	width: 500px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	line-height: 26px;
+	margin-left: 50px;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+
+.main-form .form-item textarea:focus {
+	border-color: #21cbf7;
+}
+
+
+.main-form .form-item input:focus {
+	/*outline:  #21cbf7;*/
+	border-color: #21cbf7;
+}
+
+.main-form .form-btn {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.main-form .form-btn button {
+	width: 200px;
+	height: 30px;
+	border:none;
+	background: #21cbf7;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/*error*/
+.main-error h1{
+	color: red;
+}
+
+.error-btn {
+	text-align: center;
+}
+
+.error-btn .btn {
+	display: inline-block;
+	padding: 5px 10px;
+	color: #333;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.error-btn .btn:hover {
+	background: #21cbf7;
+	border-color: #21cbf7;
+	color: #fff;
+}
+
+/*success*/
+.main-success h1 {
+	color: #21cbf7;
+}
+
+/*--------------------------------------------------*/
+
+

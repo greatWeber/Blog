@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="content">
+	<ul class="bread">
+		<li>
+			<a href="/admin">管理首页</a> <span>/</span>
+		</li>
+		<li>
+			<span>分类列表</span> <span>/</span>
+		</li>
+	</ul>
+
+	<div class="main-list">
+		<table class="main-table">
+			<thead>
+				<th width="30%">ID</th>
+				<th width="20%">分类名</th>
+				<th width="50%">编辑</th>
+			</thead>
+			<tbody>
+				{% for cate in cates %}
+					<tr>
+						<td>{{cate._id.toString()}}</td>
+						<td>{{cate.catename}}</td>
+						<td class="table-btn">
+							<a href="/admin/cate/edit?id={{cate._id.toString()}}" class="edit">修改</a>
+							<a href="/admin/cate/delete?id={{cate._id.toString()}}" class="delete">删除</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+	{% include 'page.html' %}
+</div>
+
+{% endblock %}

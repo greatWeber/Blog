@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="content">
+	<ul class="bread">
+		<li>
+			<a href="/admin">管理首页</a> <span>/</span>
+		</li>
+		<li>
+			<span>修改分类</span> <span>/</span>
+		</li>
+	</ul>
+
+	<div class="main-form">
+		<form method="post">
+			<div class="form-item">
+				<label for="cateName">分类名称</label>
+				<input type="text" value="{{cate.catename}}" name="cateName" id="cateName"/>
+				<input type="hidden" name="_id" value="{{cate._id}}">
+			</div>
+			<!-- <div class="form-item">
+				<label for="cateSrc">分类链接</label>
+				<input type="text" name="cateSrc" id="cateSrc"/>
+			</div> -->
+			<div class="form-btn">
+				<button>修 改</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

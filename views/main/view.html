@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="main-list">
+	<!-- main-item -->
+	<div class="main-item">
+		<div class="main-title">
+			<h2>{{content.title}}</h2>
+			<ul class="title-info">
+				<li>作者： <span>{{content.user.username}}</span></li>
+				<li>时间： <span>{{content.addTime|date('Y-m-d')}}</span></li>
+				<li>阅读： <span>{{content.views}}</span></li>
+				<li>评论： <span>{{content.comments.length}}</span></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<p>{{content.content}}</p>
+		</div>
+		<!-- <div class="main-btn">
+			<a href="/view?id={{content.id}}">阅读全文</a>
+		</div> -->
+	</div>
+	<!-- main-item end -->
+
+	<div class="comments">
+		{% if userInfo._id %}
+		<div class="comments-head clear">
+			<h3 class="left">评论</h3>
+			<h3 class="right">一共有<span class="comments-num">{{content.comments.length}}</span>条评论</h3>
+		</div>
+		<div class="comments-form">
+			<form>
+				<div class="form-item">
+					<input class="text" type="text" name="comments"/>
+					<input type="hidden" name="contentId" value="{{content.id}}"/>
+					<a class="btn">提交</a>
+				</div>
+			</form>
+		</div>
+		{% else %}
+		<div class="comments-tip">
+			<span>你还没有登陆，请先登陆！</span>
+		</div>
+		{% endif %}	
+
+		<div class="comments-tip tip" style="display: none"></div>
+
+		<div class="comments-list">
+			{% for comment in content.comments %}
+
+			<div class="list-item">
+				<div class="item-title clear">
+				<p class="left">{{comment.username}}</p>
+				<p class="right">{{comment.time|date('Y-m-d')}}</p>
+				</div>
+				<div class="item-content">
+					<p>{{comment.content}}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		<div class="comments-tip list-btn">
+			<span>加载更多</span>
+		</div>
+		
+	</div>
+
+
+</div>
+
+{% endblock %}

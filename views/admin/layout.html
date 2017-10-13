@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>后台管理</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8888/public/css/mindex.css">
+</head>
+<body>
+<header class="header">
+	<div class="content clear">
+		<!-- header-left -->
+		<div class="header-left">
+			<h1 class="logo"><a href="/admin/">后台管理</a></h1>
+			<ul class="header-ul">
+				<li class="header-li">
+					<a href="/admin/user">用户管理</a>
+				</li>
+				<li class="header-li">
+					<a href="/admin/cate">分类管理</a>
+					<ol class="ul-list">
+						<li class="header-li">
+							<a href="/admin/cate">分类首页</a>
+							<a href="/admin/cate/add">添加分类</a>
+						</li>
+					</ol>
+				</li>
+				<li class="header-li">
+					<a href="/admin/content">文章管理</a>
+					<ol class="ul-list">
+						<li class="header-li">
+							<a href="/admin/content">文章首页</a>
+							<a href="/admin/content/add">添加文章</a>
+						</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+		<!-- header-left end -->
+
+		<!-- header-right -->
+		<div class="header-right">
+			<ul class="header-ul">
+				<li class="header-li">
+					<a href="/">首页</a>
+				</li>
+				<li class="header-li">
+					<a>{{userInfo.username}}</a>
+					<ol class="ul-list">
+						<li class="header-li">
+							<a class="mSignOut" href="javascript:;">退出</a>
+						</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+
+		<!-- header-right end -->
+	</div>
+</header>
+
+<!-- main -->
+
+<div class="main">
+	{% block main %} {% endblock %}
+	
+</div>
+
+<!-- main end -->
+<script type="text/javascript" src="http://localhost:8888/public/js/jquery.js"></script>
+<script type="text/javascript" src="http://localhost:8888/public/js/index.js"></script>
+</body>
+</html>
